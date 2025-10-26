@@ -13,7 +13,7 @@ import {
   Github,
   Mail,
 } from "lucide-react";
-import DashboardImage from "./assets/assets";
+import {DashboardImage} from "./assets/assets";
 import Logo from "./components/Logo";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 
