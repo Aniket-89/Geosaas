@@ -1,5 +1,14 @@
+import React, { useState } from "react";
 import { Button } from "./components/ui/button";
 import { Input } from "./components/ui/input";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./components/ui/dialog";
 import {
   CheckCircle2,
   Search,
@@ -16,25 +25,22 @@ import {
 import {DashboardImage} from "./assets/assets";
 import Logo from "./components/Logo";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
+import ContactForm from "./components/ContactForm";
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-purple-200/40 via-pink-200/30 to-transparent pointer-events-none" />
-
+  <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-purple-200/40 via-pink-200/30 to-transparent pointer-events-none" />
       {/* Navigation */}
       <nav className="relative z-10 container mx-auto px-4 py-6 flex items-center justify-between">
         <Logo />
-        <Button className="bg-[rgb(252,86,21)] hover:bg-orange-700 text-white px-6 py-2 rounded-full">
-          Join waitlist
-        </Button>
+
       </nav>
 
       {/* Hero Section */}
       <div className="relative z-10 container mx-auto px-4 pt-12 pb-8">
-        <div className="max-w-5xl mx-auto text-center">
-          {/* Main Heading */}
+  <div className="max-w-5xl mx-auto text-center">
           <h1 className="mb-6 text-[48px] font-bold">
             <span className="text-black">SEO was for Google. </span>
             <span className="text-[rgb(252,86,21)]">GEO is for AI.</span>
@@ -49,14 +55,15 @@ export default function App() {
 
           {/* Email Input and CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto mb-12">
-            <Input
+            {/* <Input
               type="email"
               placeholder="Enter your email"
               className="w-full px-6 py-6 text-lg rounded-full border-gray-300"
             />
             <Button className="bg-[rgb(252,86,21)] hover:bg-orange-700 text-white px-10 py-6 rounded-full text-lg whitespace-nowrap">
               Join waitlist
-            </Button>
+            </Button> */}
+            <ContactForm />
           </div>
         </div>
 
@@ -227,14 +234,7 @@ export default function App() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-6 py-6 text-lg rounded-full border-gray-300 bg-white"
-              />
-              <Button className="bg-[rgb(252,86,21)] hover:bg-orange-700 text-white px-10 py-6 rounded-full text-lg whitespace-nowrap">
-                Join waitlist
-              </Button>
+              <ContactForm />
             </div>
           </div>
         </div>
@@ -261,25 +261,19 @@ export default function App() {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a
-                href="#"
+                href="https://www.twitter.com/aniket_web"
                 className="hover:text-[rgb(252,86,21)] transition-colors"
               >
                 <Twitter size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/aniketkgupta/"
                 className="hover:text-[rgb(252,86,21)] transition-colors"
               >
                 <Linkedin size={20} />
               </a>
               <a
-                href="#"
-                className="hover:text-[rgb(252,86,21)] transition-colors"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="#"
+                href="mailto:aniketkumarg99@gmail.com"
                 className="hover:text-[rgb(252,86,21)] transition-colors"
               >
                 <Mail size={20} />
